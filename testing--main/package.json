@@ -1,5 +1,6 @@
 {
   "name": "siddhnath-tiwari-portfolio",
+  "description": "Portfolio website",
   "private": true,
   "version": "0.0.0",
   "type": "module",
