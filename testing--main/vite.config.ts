@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { defineConfig, loadEnv } from 'vite';
