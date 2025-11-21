@@ -52,10 +52,10 @@ const Chatbot: React.FC = () => {
     // 1. Check for specific Projects (Deep Dive)
     const matchedProject = PROJECTS.find(p =>
       lowerQuery.includes(p.title.toLowerCase()) ||
-      calculateScore(lowerQuery, p.techStack) >= 2
+      calculateScore(lowerQuery, p.techStack || []) >= 2
     );
     if (matchedProject) {
-      return `That's a great project! "**${matchedProject.title}**" (${matchedProject.period}). \n\n${matchedProject.description.join(' ')} \n\nIt was built using: ${matchedProject.techStack.join(', ')}.`;
+      return `That's a great project! "**${matchedProject.title}**" (${matchedProject.period}). \n\n${matchedProject.description.join(' ')} \n\nIt was built using: ${(matchedProject.techStack || []).join(', ')}.`;
     }
 
     // 2. Check for specific Experience/Companies
@@ -64,7 +64,7 @@ const Chatbot: React.FC = () => {
       lowerQuery.includes(e.title.toLowerCase())
     );
     if (matchedExperience) {
-      return `At **${matchedExperience.company}** (${matchedExperience.period}), Siddhnath worked as a ${matchedExperience.title}. \n\nHe ${matchedExperience.description[0].toLowerCase()} and utilized skills like ${matchedExperience.skills.join(', ')}.`;
+      return `At **${matchedExperience.company}** (${matchedExperience.period}), Siddhnath worked as a ${matchedExperience.title}. \n\nHe ${matchedExperience.description[0].toLowerCase()} and utilized skills like ${(matchedExperience.skills || []).join(', ')}.`;
     }
 
     // 3. Research Interests

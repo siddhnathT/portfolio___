@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from './Section';
 import { PROJECTS } from '../constants';
-import { ExternalLink, ArrowRight, Layers, Zap, Database, Server, Globe } from 'lucide-react';
+import { ExternalLink, ArrowRight, Layers, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ArchitectureFlow: React.FC<{ flow: string }> = ({ flow }) => {
