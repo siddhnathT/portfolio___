@@ -12,8 +12,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import BackgroundEffect from './components/BackgroundEffect';
-import Chatbot from './components/Chatbot';
-
+import ChatBot from './components/Chatbot'
 function App() {
   return (
     <div className="bg-dark min-h-screen font-sans selection:bg-blue-500/30 selection:text-blue-200 overflow-x-hidden">
